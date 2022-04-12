@@ -8,6 +8,13 @@ export class TestController {
 
   @Get()
   async handle() {
-    return this.prisma.user.findMany({ take: 5 });
+    return this.prisma.user.findMany({
+      take: 5,
+      orderBy: [
+        {
+          createdAt: 'desc',
+        },
+      ],
+    });
   }
 }
