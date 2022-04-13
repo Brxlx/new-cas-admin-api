@@ -12,4 +12,8 @@ export class EventRepository {
       orderBy: [{ createdAt: 'desc' }],
     });
   }
+
+  async findEventById(id: string): Promise<Event> {
+    return this.prisma.event.findUnique({ where: { id } });
+  }
 }
