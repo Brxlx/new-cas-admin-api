@@ -6,7 +6,5 @@ import { HttpModule } from './http/http.module';
 
 @Module({
   imports: [DatabaseModule, ConfigModule, HttpModule],
-  controllers: [],
-  providers: [],
 })
 export class AppModule {}

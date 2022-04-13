@@ -1,8 +1,8 @@
 {
   "name": "new-cas-admin-api",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "The refactored cas-admin-api",
+  "author": "Bruno Santos",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
