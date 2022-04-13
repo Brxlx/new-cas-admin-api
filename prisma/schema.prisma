@@ -126,6 +126,8 @@ model Event {
   createdAt DateTime @db.Date
   name      String   @unique(map: "name_1")
   updatedAt DateTime @db.Date
+
+  @@map("event")
 }
 
 model Group {
