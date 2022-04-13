@@ -1,10 +1,9 @@
 import { Module } from '@nestjs/common';
 
 import { ConfigModule } from '../../config/config.module';
-import { DatabaseModule } from '../../database/database.module';
 import { GraphqlModule } from './graphql/graphql.module';
 
 @Module({
-  imports: [ConfigModule, DatabaseModule, GraphqlModule],
+  imports: [ConfigModule, GraphqlModule],
 })
 export class HttpModule {}
