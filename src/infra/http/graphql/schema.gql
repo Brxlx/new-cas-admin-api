@@ -14,7 +14,43 @@ A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date
 """
 scalar DateTime
 
+type User {
+  id: ID!
+  name: String!
+  username: String!
+  phone: String!
+  password: String!
+  avatar: String!
+  company: String!
+  description: String!
+  email: String!
+  groups: String!
+  isActive: Boolean!
+  isAdmin: Boolean!
+  isClient: Boolean!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
 type Query {
   findAllEvents: [Event!]!
   findEventById(id: String!): Event!
+}
+
+type Mutation {
+  createUser(data: createUserInput!): User!
+}
+
+input createUserInput {
+  name: String!
+  username: String!
+  phone: String
+  password: String!
+  avatar: String
+  company: String
+  description: String
+  email: String!
+  isActive: Boolean = true
+  isAdmin: Boolean = false
+  isClient: Boolean = true
 }

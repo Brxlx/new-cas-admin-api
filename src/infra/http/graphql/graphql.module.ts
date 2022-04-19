@@ -5,7 +5,9 @@ import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
 
 import { EventModule } from '../../../domain/modules/event/event.module';
+import { UserModule } from '../../../domain/modules/user/user.module';
 import { EventResolver } from './resolvers/event.resolver';
+import { UserResolver } from './resolvers/user.resolver';
 
 @Module({
   imports: [
@@ -14,7 +16,8 @@ import { EventResolver } from './resolvers/event.resolver';
       autoSchemaFile: path.resolve(process.cwd(), 'src/infra/http/graphql/schema.gql'),
     }),
     EventModule,
+    UserModule,
   ],
-  providers: [EventResolver],
+  providers: [EventResolver, UserResolver],
 })
 export class GraphqlModule {}
