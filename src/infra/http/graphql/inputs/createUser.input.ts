@@ -34,4 +34,10 @@ export class createUserInput {
 
   @Field({ defaultValue: true })
   isClient: boolean;
+
+  @Field({ defaultValue: new Date(Date.now()) })
+  createdAt: Date;
+
+  @Field({ defaultValue: new Date(Date.now()) })
+  updatedAt: Date;
 }

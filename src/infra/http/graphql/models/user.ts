@@ -41,9 +41,9 @@ export class User {
   @Field()
   isClient: boolean;
 
-  @Field()
+  @Field(() => Date)
   createdAt: Date;
 
-  @Field()
+  @Field(() => Date)
   updatedAt: Date;
 }

@@ -4,7 +4,7 @@ import { FindEventService } from '../../../../domain/modules/event/find/findEven
 import { ListEventService } from '../../../../domain/modules/event/list/listEvent.service';
 import { Event } from '../models/event';
 
-@Resolver()
+@Resolver(() => Event)
 export class EventResolver {
   constructor(
     private listEventService: ListEventService,

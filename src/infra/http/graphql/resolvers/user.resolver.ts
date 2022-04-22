@@ -4,7 +4,7 @@ import { CreateUserService } from '../../../../domain/modules/user/create/create
 import { createUserInput } from '../inputs/createUser.input';
 import { User } from '../models/user';
 
-@Resolver()
+@Resolver(() => User)
 export class UserResolver {
   constructor(private createUserService: CreateUserService) {}
 
